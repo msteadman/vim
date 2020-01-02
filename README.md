@@ -4,9 +4,11 @@ Manage VIM settings in a useful, shareable way, using git submodules to take adv
 
 ## Starting on a new system
 
+In the home directory clone the repo as `.vim` and run `ln -s .vim/vimrc .vimrc` to set things up. Initialize the submodules by running:
+
 ```sh
-git clone https://github.com/myk/vim.git .vim
-ln -s .vim/vimrc .vimrc
+git submodule init
+git submodule update --remote --merge
 ```
 
 ## Packages
