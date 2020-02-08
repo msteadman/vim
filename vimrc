@@ -13,6 +13,8 @@ set encoding=utf-8
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
 
+vnoremap . :norm.<CR>           " use dot to repeat in visual mode
+
 "" Whitespace
 set nowrap                      " don't wrap lines
 set tabstop=4 shiftwidth=4      " a tab is 4 spaces
