@@ -34,3 +34,12 @@ rm -rf .git/modules/pack/myk/start/vim-fugitive
 ```
 
 Remember to commit/push after any changes. Help tags for plugins aren't automatically generated, just run `:helptags ALL` in VIM to add them. For packages that don't need to be automatically loaded, put them in `pack/myk/opt` and activate them in VIM with `:packadd packagename`.
+
+## Keeping in Sync
+
+On other systems where you just want to keep in sync but aren't doing any package management:
+
+```sh
+git pull
+git submodule update --merge
+```
