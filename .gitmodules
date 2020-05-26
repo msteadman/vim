@@ -13,3 +13,6 @@
 [submodule "pack/myk/opt/nginx.vim"]
 	path = pack/myk/opt/nginx.vim
 	url = https://github.com/chr4/nginx.vim.git
+[submodule "pack/vim-flake8/start/vim-flake8"]
+	path = pack/vim-flake8/start/vim-flake8
+	url = https://github.com/nvie/vim-flake8.git
