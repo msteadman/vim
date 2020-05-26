@@ -22,7 +22,7 @@ set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everying in insert mode
 
 "" Searching
-set hlsearch                    " highlight matches
+set hlsearch                    " highlight matches (:noh cancels hl for current search)
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ...unless they contain at least one uppercase letter

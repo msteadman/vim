@@ -1,6 +1,6 @@
-# VIM Settings
+# Vim Settings
 
-Manage VIM settings in a useful, shareable way, using git submodules to take advantage of VIM 8's built-in package handling.
+Manage Vim settings so they can be synced between machines.
 
 ## Starting on a new system
 
@@ -8,10 +8,15 @@ In the home directory clone the repo as `.vim` and run `ln -s .vim/vimrc .vimrc`
 
 ```sh
 git submodule init
-git submodule update --remote --merge
+git submodule update
 ```
 
-## Packages
+## Package Management
+
+Using Vim 8's native package support, and `git submodule` for syncing. References:
+
+* [Vim: So long Pathogen, hello native package loading](https://shapeshed.com/vim-packages/)
+* [Using Vim packages](https://vimhelp.org/repeat.txt.html#packages)
 
 Adding a package:
 
@@ -21,8 +26,15 @@ git submodule add https://github.com/tpope/vim-fugitive.git pack/myk/start/vim-f
 
 Updating packages:
 
+If you're pulling updates, run:
+
 ```sh
 git submodule update --remote --merge
+```
+Or if you're just keeping in sync after a `git pull`, run:
+
+```sh
+git submodule update --merge
 ```
 
 Removing a package:
@@ -33,7 +45,7 @@ git rm pack/myk/start/vim-fugitive
 rm -rf .git/modules/pack/myk/start/vim-fugitive
 ```
 
-Remember to commit/push after any changes. Help tags for plugins aren't automatically generated, just run `:helptags ALL` in VIM to add them. For packages that don't need to be automatically loaded, put them in `pack/myk/opt` and activate them in VIM with `:packadd packagename`.
+Remember to commit/push after any changes. Help tags for plugins aren't automatically generated, just run `:helptags ALL` to add them. For packages that don't need to be automatically loaded, put them in `pack/myk/opt` and activate them with `:packadd packagename`.
 
 ## Keeping in Sync
 
