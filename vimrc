@@ -20,6 +20,7 @@ set nowrap                      " don't wrap lines
 set tabstop=4 shiftwidth=4      " a tab is 4 spaces
 set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everying in insert mode
+autocmd BufWritePre *.py :%s/\s\+$//e  " trim trailing whitespace on save
 
 "" Searching
 set hlsearch                    " highlight matches (:noh cancels hl for current search)
