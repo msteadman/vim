@@ -8,6 +8,8 @@ let g:airline_powerline_fonts = 1
 
 syntax enable
 set ruler
+set cursorline
+set number
 set laststatus=2
 set encoding=utf-8
 set showcmd                     " display incomplete commands
