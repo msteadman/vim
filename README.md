@@ -29,12 +29,12 @@ Updating packages:
 If you're pulling updates, run:
 
 ```sh
-git submodule update --remote --merge
+git submodule update --init --remote
 ```
 Or if you're just keeping in sync after a `git pull`, run:
 
 ```sh
-git submodule update --merge
+git submodule update --init
 ```
 
 Removing a package:
@@ -53,5 +53,5 @@ On other systems where you just want to keep in sync but aren't doing any packag
 
 ```sh
 git pull
-git submodule update --merge
+git submodule update --init
 ```
